@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-4@&5q#%j1f%=&1!ahc&c&ql@ax3fonxu_@(!2%a%vp^yjurtm&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'bookquistproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR + '/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
