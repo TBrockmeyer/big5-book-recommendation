@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-4@&5q#%j1f%=&1!ahc&c&ql@ax3fonxu_@(!2%a%vp^yjurtm&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 # Application definition
@@ -121,17 +121,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'bookquistproject','staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'bookquistproject','staticfiles')
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'bookquistproject/static'),
 )
-
-print("######################################")
-print(STATIC_ROOT)
-print("######################################")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
