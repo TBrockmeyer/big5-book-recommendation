@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('bookquistapp/', include('bookquistapp.urls')),
+    path('app/', include('bookquistapp.urls')),
     path('admin/', admin.site.urls),
 ]
