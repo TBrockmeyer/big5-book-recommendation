@@ -1,8 +1,8 @@
-{% load static %}
+{% include "bookquistapp/app_base.html" %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'bookquistapp/style.css' %}">
-
-<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+{% block content %}
 
 <h1>Employee detail</h1>
 <p>Employee detail text: {{ employee_name }}</p>
+
+{% endblock %}
