@@ -1,8 +1,8 @@
 {% include "bookquistapp/app_base.html" %}
 
-{% block content %}
-
 <h1>Employee detail</h1>
-<p>Employee detail text: {{ employee_name }}</p>
+<p>Employee name: {{ employee_details.employee_firstname }}&nbsp;{{ employee_details.employee_lastname }}</p>
 
-{% endblock %}
+{% include "bookquistapp/employee_nav.html" %}
+
+{% include "bookquistapp/app_js.html" %}

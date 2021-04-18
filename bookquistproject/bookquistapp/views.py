@@ -12,7 +12,11 @@ class EmployeeListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['employee_name'] = 'Fritz'
+        employee_list = []
+        employee_objects = Employee.objects.all()
+        for eo in employee_objects:
+            employee_list.append({"pk": str(eo.pk), "employee_id": str(eo.employee_id), "employee_firstname": eo.employee_firstname, "employee_lastname": eo.employee_lastname})
+        context["employee_list"] = employee_list
         return context
 
 class EmployeeDetailView(DetailView):
@@ -20,5 +24,5 @@ class EmployeeDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['employee_name'] = Employee.objects.get(employee_id=1).employee_firstname
+        context['employee_details'] = Employee.objects.get(employee_id=self.kwargs["pk"])
         return context
