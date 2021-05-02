@@ -15,7 +15,7 @@ class EmployeeListView(ListView):
         employee_list = []
         employee_objects = Employee.objects.all()
         for eo in employee_objects:
-            employee_list.append({"pk": str(eo.pk), "employee_id": str(eo.employee_id), "employee_firstname": eo.employee_firstname, "employee_lastname": eo.employee_lastname})
+            employee_list.append({"pk": str(eo.pk), "employee_id": str(eo.employee_id), "employee_firstname": eo.employee_firstname, "employee_lastname": eo.employee_lastname, "employee_selfperception_text": eo.employee_selfperception_text})
         context["employee_list"] = employee_list
         return context
 
