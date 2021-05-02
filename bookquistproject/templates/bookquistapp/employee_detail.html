@@ -1,8 +1,13 @@
 {% include "bookquistapp/app_base.html" %}
 
-<h1>Employee detail</h1>
-<p>Employee name: {{ employee_details.employee_firstname }}&nbsp;{{ employee_details.employee_lastname }}</p>
-<p>Employee self-perception text: {{ employee_details.employee_selfperception_text }}</p>
+<div class="col col-header">
+    <h4>Employee detail</h4>
+</div>
+
+<div class="col col-header">
+    <p>Employee name: {{ employee_details.employee_firstname }}&nbsp;{{ employee_details.employee_lastname }}</p>
+    <p>Employee self-perception text: {{ employee_details.employee_selfperception_text }}</p>
+</div>
 
 {% include "bookquistapp/employee_nav.html" %}
 
