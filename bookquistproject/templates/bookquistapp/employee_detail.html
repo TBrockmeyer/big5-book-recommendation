@@ -4,11 +4,15 @@
     <h4>Employee detail</h4>
 </div>
 
-<div class="col col-header">
-    <p>Employee name: {{ employee_details.employee_firstname }}&nbsp;{{ employee_details.employee_lastname }}</p>
-    <p>Employee self-perception text: {{ employee_details.employee_selfperception_text }}</p>
-</div>
+<div class="col">
+    {% for eo in employee_list %}
+        <div class="col">
+            <p>Employee name: {{ eo.employee_firstname }}&nbsp;{{ eo.employee_lastname }}</p>
+            <p>Employee self-perception text: {{ eo.employee_selfperception_text }}</p>
+        </div>
 
-{% include "bookquistapp/employee_nav.html" %}
+        <a href="../../employeedetail/{{ eo.pk }}/">Detail (self-link) for {{ eo.employee_firstname }}&nbsp;{{ eo.employee_lastname }}</a>
+    {% endfor %}
+</div>
 
 {% include "bookquistapp/app_js.html" %}
